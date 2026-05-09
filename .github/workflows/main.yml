@@ -2,9 +2,14 @@
 name: Build WF
 
 on:
-  push:
+  # push:
+  #   branches:
+  #     - main
+
+  pull_request:
     branches:
-      - main
+      - main #means whenever there is PR raises from the branch which is created from main branch, trigger happens
+      - feature
 
 jobs:
   build:
